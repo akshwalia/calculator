@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(94, 93, 93);
+    color: white;
+    font-family: "Roboto","Arial",sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    flex-shrink: 0;
+    background-color: rgb(32, 32, 32);
+    padding:20px;
+    border-radius: 13px;
+    width: 260px;
+    margin-top: 100px;
+}
+
+#display {
+    background-color: rgb(54, 54, 54);
+    height: 85px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0  0  10px  black inset;
+}
+
+.firstRow,
+.secondRow,
+.thirdRow,
+.fourthRow {
+    display: flex;
+    justify-content: space-between;
+    margin:10px 0px
+}
+
+.fifthRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.buttons {
+    box-shadow: 0 3px 10px black;
+    padding:20px;
+    border-radius: 50%;
+    height:16px;
+    width:16px;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(85, 84, 84);
+}
+
+#equals {
+    border-radius: 45px;
+    width:84px
+}
+
+.buttons:hover {
+    cursor: pointer;
+    background-color: rgb(117, 116, 116);
+}
+
+.buttons:active {
+    transform: scale(0.94);
+}
+
+.footer {
+    margin: 50px;
+    font-size: 13px;
+}
