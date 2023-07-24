@@ -51,11 +51,9 @@ numbers.forEach(num => {
         }
         if(operator==="") {
             updateFirstOperand(e);
-            console.log(firstOperand);
         }
         else {
             updateSecondOperand(e);
-            console.log(secondOperand);
         }
     })
 });
@@ -120,5 +118,51 @@ clear.addEventListener('click', () => {
     firstOperand="";
     secondOperand="";
     operator="";
+});
+
+window.addEventListener("keydown", (e) => {
+    let pressed=`${e.key}`;
+    
+    if(Number.isInteger(Number(pressed))) {
+        document.getElementById(pressed).click();
+        document.getElementById(pressed).classList.add('pressed');
+        setTimeout( () => 
+        document.getElementById(pressed).classList.remove('pressed')
+        , 200);
+    }
+    if(pressed=='/' || pressed=='*' || pressed=='-' || pressed=='+' || pressed=='%') {
+        document.getElementById(pressed).click();
+        document.getElementById(pressed).classList.add('pressed');
+        setTimeout( () => 
+        document.getElementById(pressed).classList.remove('pressed')
+        , 200);
+    }
+
+    
+    if(pressed=='Enter') {
+        document.getElementById('equals').click();
+        document.getElementById('equals').classList.add('pressed');
+        setTimeout( () => 
+        document.getElementById('equals').classList.remove('pressed')
+        , 200);
+    }
+    
+    if(pressed=='Backspace') {
+        document.getElementById('delete').click();
+        document.getElementById('delete').classList.add('pressed');
+        setTimeout( () => 
+        document.getElementById('delete').classList.remove('pressed')
+        , 200);
+    }
+
+
+    if(pressed=='Delete') {
+        document.getElementById('clear').click();
+        document.getElementById('clear').classList.add('pressed');
+        setTimeout( () => 
+        document.getElementById('clear').classList.remove('pressed')
+        , 200);
+    }
+
 });
 

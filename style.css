@@ -68,11 +68,16 @@ body {
 
 .buttons:hover {
     cursor: pointer;
-    background-color: rgb(117, 116, 116);
+    background-color: rgb(88, 88, 88);
 }
 
 .buttons:active {
     transform: scale(0.94);
+}
+
+.pressed {
+    transform: scale(0.94);
+    background-color: rgb(126, 124, 124);
 }
 
 .footer {
