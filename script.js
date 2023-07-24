@@ -12,12 +12,16 @@ let firstMinus="";
 
 
 function updateFirstOperand(e) {
+    if(firstOperand=="" && e.target.id=='.')
+        return;
     firstOperand+=`${firstMinus}${e.target.id}`;
     firstMinus="";
     bottomDisplay.textContent=firstOperand;
 }
 
 function updateSecondOperand(e) {
+    if(secondOperand=="" && e.target.id=='.')
+        return;
     secondOperand+=`${e.target.id}`;
     topDisplay.textContent=firstOperand+operator;
     bottomDisplay.textContent=secondOperand;
@@ -138,7 +142,7 @@ window.addEventListener("keydown", (e) => {
         document.getElementById(pressed).classList.remove('pressed')
         , 200);
     }
-    if(pressed=='/' || pressed=='*' || pressed=='-' || pressed=='+' || pressed=='%') {
+    if(pressed=='/' || pressed=='*' || pressed=='-' || pressed=='+' || pressed=='%' || pressed=='.') {
         document.getElementById(pressed).click();
         document.getElementById(pressed).classList.add('pressed');
         setTimeout( () => 
