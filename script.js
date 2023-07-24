@@ -11,7 +11,6 @@ let firstOperand="", secondOperand="", operator="";
 let firstMinus="";
 
 
-
 function updateFirstOperand(e) {
     firstOperand+=`${firstMinus}${e.target.id}`;
     firstMinus="";
