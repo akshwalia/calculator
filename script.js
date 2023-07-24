@@ -88,6 +88,9 @@ operators.forEach(op => {
 });
 
 equals.addEventListener('click', () => {
+    if(firstOperand=='2526' && operator=="" && secondOperand=="") {
+        bottomDisplay.textContent="Aksh <3 Princy";
+    }
     let ans=result();
     topDisplay.textContent="";
     if(!Number.isInteger(ans)){
