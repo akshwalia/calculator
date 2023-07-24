@@ -142,11 +142,19 @@ window.addEventListener("keydown", (e) => {
         document.getElementById(pressed).classList.remove('pressed')
         , 200);
     }
-    if(pressed=='/' || pressed=='*' || pressed=='-' || pressed=='+' || pressed=='%' || pressed=='.') {
+    if(pressed=='/' || pressed=='-' || pressed=='+' || pressed=='%' || pressed=='.') {
         document.getElementById(pressed).click();
         document.getElementById(pressed).classList.add('pressed');
         setTimeout( () => 
         document.getElementById(pressed).classList.remove('pressed')
+        , 200);
+    }
+
+    if(pressed=='*') {
+        document.getElementById('x').click();
+        document.getElementById('x').classList.add('pressed');
+        setTimeout( () => 
+        document.getElementById('x').classList.remove('pressed')
         , 200);
     }
 
