@@ -71,8 +71,11 @@ operators.forEach(op => {
         }
         else if(secondOperand!=="" && secondOperand!=="flag"){
             let res = result();
-            if(!Number.isInteger(res))
-                res=res.toFixed(2);
+            if(!Number.isInteger(res)){
+                res=res.toFixed(6);
+                res=`${res}`;
+                res=parseFloat(res);
+            }
             firstOperand=res;
             secondOperand="";
             updateOperator(e);
@@ -86,8 +89,11 @@ operators.forEach(op => {
 equals.addEventListener('click', () => {
     let ans=result();
     topDisplay.textContent="";
-    if(!Number.isInteger(ans))
-        ans=ans.toFixed(2);
+    if(!Number.isInteger(ans)){
+        ans=ans.toFixed(6);
+        ans=`${ans}`;
+        ans=parseFloat(ans);
+    }
     firstOperand=ans;
     operator="";
     secondOperand="flag";
