@@ -91,6 +91,9 @@ equals.addEventListener('click', () => {
     if(firstOperand=='2526' && operator=="" && secondOperand=="") {
         bottomDisplay.textContent="Aksh <3 Princy";
     }
+    if(firstOperand=='98.92' && operator=="" && secondOperand=="") {
+        bottomDisplay.textContent="Osama <3 Arvind";
+    }
     let ans=result();
     topDisplay.textContent="";
     if(!Number.isInteger(ans)){
