@@ -98,6 +98,14 @@ equals.addEventListener('click', () => {
 });
 
 del.addEventListener('click', () => {
+    if(secondOperand==="flag")
+    {
+        bottomDisplay.textContent="";
+        topDisplay.textContent="";
+        firstOperand="";
+        secondOperand="";
+        operator="";
+    }
     if(secondOperand!=="") {
         secondOperand=secondOperand.substring(0,secondOperand.length-1);
         bottomDisplay.textContent=secondOperand;
